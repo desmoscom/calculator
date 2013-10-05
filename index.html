@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <!--chrome=1 enables chrome frame; IE=9 keeps IE from rendering in fallback mode.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=9, chrome=1" />
+
+    <meta name="Description" content="A beautiful, free, online graphing calculator from desmos.com" />
+
+
+    <meta property="og:site_name" content="Desmos Graphing Calculator" />
+
+
+    <!--[if lt IE 10 ]>
+    <link rel="stylesheet" href="ie9-03b01e94093e49e1b4d1d9f772f4d6da3f64ebe1.min.css" />
+    <![endif]-->
+    
+    
+    <link rel="stylesheet" href="grapher-f75f9ac3e07a7980f3d837c0812276bcef7d258f.min.css" />
+
+    <title>Desmos Graphing Calculator</title>
+</head>
+<body
+  data-load-data="{&#34;graph&#34;: null, &#34;seed&#34;: &#34;dcc904bfada64c42aa2284ab1721da1c&#34;, &#34;user&#34;: null}"
+>
+<div id="main">
+
+  <!-- LOGIN MODALS -->
+  <div id="modal_background"></div>
+  <div class="modal" id="state-modals">
+      <span class="close-modal icon-remove"></span>
+  </div> <!-- end div#login_modal -->
+
+  <!-- GRAPHER -->
+  <div id="sliding-interior">
+    <!-- this is where the tools go. leaving div in because I like it aesthetically during load-up -->
+    <div id="subheader"></div>
+
+    <div style="position:absolute; top:50%; width:100%; text-align:center" id="loading_div">
+
+
+        loading...
+    
+
+    </div>
+    <div id="grapher"></div>
+  </div>
+
+</div>
+
+
+<!-- 1pixel white image for printing in FF -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wLEhYhKmtn2wYAAAAidEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOHqHdDAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC" id="whitebg">
+ <!-- 1 white pixel for printing in FF -->
+
+
+
+<script type="text/javascript">
+  if(!window.Desmos) window.Desmos = {};
+  window.Desmos.config = {"zoomButtons": false, "keypad": true, "platform": "www", "testing": false, "menus": false, "maintenance": false, "workerURL": "worker-8134abbf7ca346a9935902ac8624700abee7328d.min.js", "dragpoints": true}; 
+</script>
+ <!-- Pull config information, and include it in Desmos.config -->
+<!-- TODO - get console and pushstate into regular .js files -->
+<script type="text/javascript">
+  if(!window.console) window.console = {};
+  if(!window.console.log) window.console.log = function(){};
+</script>
+ <!-- Make sure console.log is defined -->
+<script type="text/javascript">
+  if(window.location.protocol === 'file:')
+    window.history.pushState = function(){};
+</script>
+ <!-- Make sure we don't use pushstate on file protocol -->
+
+
+
+
+<script type="text/javascript">
+(function(){
+  window._kmq = window._kmq || [];
+  
+  window._kmk = 'b6b27792ef80bcea7d766ecf7c7fd286f2b3bba9';
+  
+})();
+</script>
+ <!-- Analytics config info.  TODO - include this in Desmos.config -->
+
+
+<script src="calculator_desktop-780fe08bef2950405c59ea365f1b3b92e0265b44.min.js"></script>
+
+</body>
+</html>

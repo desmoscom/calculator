@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+
+  <link rel="stylesheet" href="calculator_embed-f578c87de43a9994d98444857bb0d4f41176f24d.min.css" />
+
+
+
+  <style>
+    html, body, #calculator {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body
+  data-load-data="{&#34;graph&#34;: null, &#34;seed&#34;: &#34;a00a61bad37d4b34af219d3700fb6b56&#34;, &#34;user&#34;: null}"
+  class="bootstrap-shim"
+>
+
+<div id="calculator"></div>
+
+
+
+
+
+<script type="text/javascript">
+  if(!window.Desmos) window.Desmos = {};
+  window.Desmos.config = {"zoomButtons": false, "keypad": false, "platform": "www", "testing": false, "no_focus": true, "menus": false, "disable_dblclick_zooming": true, "maintenance": false, "workerURL": "worker-8134abbf7ca346a9935902ac8624700abee7328d.min.js", "dragpoints": true, "no_navigation_warning": true}; 
+</script>
+ <!-- Pull config information, and include it in Desmos.config -->
+
+<script src="calculator_embed-cde7e4bb6529c228b6b05837d45e0b2a1b288c78.min.js"></script>
+
+<script>
+  Desmos.require(['api/calculator'], function (Calculator) {
+    window.calculator = Calculator(document.getElementById('calculator'));
+    window.$ = Desmos.$; // Needed for testing;
+    var loadData = JSON.parse(document.body.attributes["data-load-data"].value);
+    if (loadData && loadData.graph) calculator.setState(loadData.graph.state);
+    window.addEventListener('resize', function () {
+      calculator.resize();
+    }, false);
+    // Needed for testing.
+    window.Calc = calculator._calc;
+    window.Screenshot = calculator._calc.Screenshot;
+  });
+</script>
+
+</body>
+</html>

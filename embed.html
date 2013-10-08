@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
 
-  <link rel="stylesheet" href="calculator_embed-f578c87de43a9994d98444857bb0d4f41176f24d.min.css" />
+  <link rel="stylesheet" href="embed.css" />
 
 
 
@@ -23,24 +23,12 @@
     }
   </style>
 </head>
-<body
-  data-load-data="{&#34;graph&#34;: null, &#34;seed&#34;: &#34;a00a61bad37d4b34af219d3700fb6b56&#34;, &#34;user&#34;: null}"
-  class="bootstrap-shim"
->
+<body data-load-data="{&#34;graph&#34;: null, &#34;seed&#34;: &#34;a00a61bad37d4b34af219d3700fb6b56&#34;, &#34;user&#34;: null}" class="bootstrap-shim">
 
 <div id="calculator"></div>
 
 
-
-
-
-<script type="text/javascript">
-  if(!window.Desmos) window.Desmos = {};
-  window.Desmos.config = {"zoomButtons": false, "keypad": false, "platform": "www", "testing": false, "no_focus": true, "menus": false, "disable_dblclick_zooming": true, "maintenance": false, "workerURL": "worker-8134abbf7ca346a9935902ac8624700abee7328d.min.js", "dragpoints": true, "no_navigation_warning": true}; 
-</script>
- <!-- Pull config information, and include it in Desmos.config -->
-
-<script src="calculator_embed-cde7e4bb6529c228b6b05837d45e0b2a1b288c78.min.js"></script>
+<script src="embed.js"></script>
 
 <script>
   Desmos.require(['api/calculator'], function (Calculator) {
